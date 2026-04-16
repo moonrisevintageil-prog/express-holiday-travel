@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Express Holiday Travel</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f8fb;
+            color: #333;
+        }
+
+        header {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .logo {
+            width: 180px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .banner {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        nav {
+            background-color: #f28c28;
+            text-align: center;
+            padding: 14px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        h1, h2 {
+            color: #0b5dbb;
+        }
+
+        footer {
+            background-color: #0b5dbb;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .disclaimer {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #fff3cd;
+            border-left: 5px solid #f28c28;
+            font-size: 14px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+        }
+
+        input[type="submit"] {
+            background-color: #f28c28;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #d97706;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Express Holidays Logo" class="logo">
+    </header>
+
+    <img src="banner.png" alt="Express Holidays Banner" class="banner">
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="austria.html">Austria</a>
+        <a href="italy.html">Italy</a>
+        <a href="ireland.html">Ireland</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h1>Contact Us</h1>
+
+        <p>Please share your feedback about Express Holiday Travel.</p>
+
+        <form action="#" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="6" cols="40" required></textarea><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <div class="disclaimer">
+            <strong>Disclaimer:</strong> This is an educational project and no actual travel is offered.
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Express Holiday Travel</p>
+    </footer>
+
+</body>
+</html>
