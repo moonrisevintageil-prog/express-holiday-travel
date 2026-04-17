@@ -6,7 +6,23 @@
     <title>Express Holiday Travel | Contact</title>
 <meta name="description" content="Contact Express Holiday Travel and submit feedback through the website contact form.">
 <meta name="keywords" content="contact, feedback, travel website, Express Holiday Travel, form">
+<!-- Form processing powered by FormSubmit: https://formsubmit.co/ -->
+<form action="https://formsubmit.co/YOUR_EMAIL_ADDRESS" method="POST">
+    <input type="hidden" name="_subject" value="New Express Holiday Travel Contact Form Submission">
+    <input type="hidden" name="_template" value="table">
+    <input type="text" name="_honey" style="display:none">
 
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="comments">Comments:</label><br>
+    <textarea id="comments" name="comments" rows="6" cols="40" required></textarea><br><br>
+
+    <input type="submit" value="Submit">
+</form>
     <style>
         body {
             margin: 0;
