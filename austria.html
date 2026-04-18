@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Express Holiday Travel - Austria</title>
-	<meta name="description" content="Discover Austria with Express Holiday Travel, including scenic landscapes, culture, and attractions.">
-	<meta name="keywords" content="Austria travel, Austria tourism, Europe travel, mountains, Vienna, Express Holiday Travel">
+    <title>Express Holiday Travel | Austria</title>
+    <meta name="description" content="Discover Austria with Express Holiday Travel, including scenic landscapes, culture, and attractions.">
+    <meta name="keywords" content="Austria travel, Austria tourism, Europe travel, Vienna, Alps, Express Holiday Travel">
+
     <style>
         body {
             margin: 0;
@@ -23,12 +24,12 @@
         .logo {
             width: 180px;
             max-width: 100%;
+            height: auto;
         }
 
         .banner {
             width: 100%;
-            max-height: 280px;
-            object-fit: cover;
+            height: auto;
             display: block;
         }
 
@@ -46,6 +47,10 @@
             font-size: 16px;
         }
 
+        nav a:hover {
+            text-decoration: underline;
+        }
+
         main {
             max-width: 1000px;
             margin: 25px auto;
@@ -54,16 +59,23 @@
             border-radius: 8px;
         }
 
-        h1, h2 {
+        h1, h2, h3 {
             color: #0b5dbb;
         }
 
         .main-image {
             width: 100%;
-            max-height: 380px;
-            object-fit: cover;
+            max-width: 100%;
+            height: auto;
             border-radius: 8px;
             margin: 20px 0;
+            display: block;
+        }
+
+        audio, iframe {
+            display: block;
+            margin: 20px 0;
+            max-width: 100%;
         }
 
         footer {
@@ -81,6 +93,40 @@
             border-left: 5px solid #f28c28;
             font-size: 14px;
         }
+
+        /* Accordion styles */
+        .accordion {
+            background-color: #f28c28;
+            color: white;
+            cursor: pointer;
+            padding: 14px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+
+        .accordion:hover,
+        .active {
+            background-color: #d97706;
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            border: 1px solid #ddd;
+            border-radius: 0 0 4px 4px;
+        }
+
+        .panel p {
+            margin: 15px 0;
+        }
     </style>
 </head>
 <body>
@@ -96,51 +142,82 @@
         <a href="austria.html">Austria</a>
         <a href="italy.html">Italy</a>
         <a href="ireland.html">Ireland</a>
-	<a href="contact.html">Contact</a>
+        <a href="contact.html">Contact</a>
     </nav>
 
     <main>
-	<main>
-    <h1>Austria</h1>
-	<h2>Watch a Travel Video</h2>
-
-	<iframe width="560" height="315"
-	src="https://www.youtube.com/embed/wVF2fmm38QE"
-	title="Austria Travel Video"
-	frameborder="0"
-	allowfullscreen>
-</iframe>
-    <h2>Listen to Relaxing Ocean Sounds</h2>
-    <audio controls>
-        <source src="dragon-studio-soothing-ocean-waves-372489.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
         <h1>Discover Austria</h1>
 
-        <img src="austria.jpg" alt="Austria landscape" class="main-image">
+        <img src="home.png" alt="Scenic Austria" class="main-image">
 
         <p>
-            Austria is a destination known for breathtaking alpine scenery, elegant cities, and
-            rich cultural traditions. Visitors can experience the beauty of the Austrian Alps,
-            where winter offers skiing and summer brings hiking, sightseeing, and incredible views.
-            Vienna, the capital city, is well known for its music, architecture, and historic palaces.
+            Austria is known for its beautiful Alpine scenery, historic cities, and rich cultural heritage.
+            Visitors can enjoy mountain views, classical music history, and impressive architecture.
         </p>
 
         <p>
-            Travelers to Austria can enjoy charming villages, peaceful lakes, and beautiful mountain
-            landscapes. From classical music history to outdoor adventure, Austria offers a balance
-            of culture and relaxation that makes it one of Europe’s most memorable destinations.
+            From Vienna to Salzburg, Austria offers a mix of natural beauty and cultural experiences that make it
+            a memorable European destination.
         </p>
+
+        <h2>Watch a Travel Video</h2>
+        <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/wVF2fmm38QE"
+        title="Austria Travel Video"
+        frameborder="0"
+        allowfullscreen>
+        </iframe>
+
+        <h2>Listen to Relaxing Ocean Sounds</h2>
+        <audio controls>
+            <source src="dragon-studio-soothing-ocean-waves-372489.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Accordion adapted from W3Schools -->
+        <h2>Austria Travel Information</h2>
+
+        <button class="accordion">Top Attractions</button>
+        <div class="panel">
+            <p>Austria is famous for Vienna, Salzburg, the Alps, charming villages, and historic palaces.</p>
+        </div>
+
+        <button class="accordion">Best Time to Visit</button>
+        <div class="panel">
+            <p>Austria is a great place to visit year-round. Summer is ideal for sightseeing, while winter is perfect for skiing and mountain travel.</p>
+        </div>
+
+        <button class="accordion">Travel Tips</button>
+        <div class="panel">
+            <p>Bring comfortable walking shoes, check mountain weather ahead of time, and plan transportation early if you want to visit multiple cities.</p>
+        </div>
 
         <div class="disclaimer">
-            <strong>Disclaimer:</strong> This is a fictional website created for educational purposes only.
-            Express Holiday Travel does not offer real travel services or bookings.
+            <strong>Disclaimer:</strong> This is an educational project and no actual travel is offered.
         </div>
     </main>
 
     <footer>
         <p>&copy; 2026 Express Holiday Travel</p>
     </footer>
+
+    <!-- Accordion JavaScript -->
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+    </script>
 
 </body>
 </html>
