@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Express Holiday Travel</title>
-<meta name="description" content="Explore Express Holiday Travel and discover featured destinations in Austria, Italy, and Ireland.">
-<meta name="keywords" content="travel, Europe, Austria, Italy, Ireland, vacation, tourism, Express Holiday Travel">
+
     <style>
         body {
             margin: 0;
@@ -57,19 +56,9 @@
             padding: 25px;
             border-radius: 8px;
         }
-	
 
         h1, h2 {
             color: #0b5dbb;
-        }
-
-        .main-image {
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin: 20px 0;
-            display: block;
         }
 
         footer {
@@ -86,6 +75,43 @@
             background-color: #fff3cd;
             border-left: 5px solid #f28c28;
             font-size: 14px;
+        }
+
+        /* Slideshow styles */
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: 20px auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .mySlides img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: translateY(-50%);
+            user-select: none;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
         }
     </style>
 </head>
@@ -108,7 +134,25 @@
     <main>
         <h1>Welcome to Express Holiday Travel</h1>
 
-        <img src="home.png" alt="European travel destination" class="main-image">
+        <!-- Slideshow -->
+        <h2>Featured Travel Highlights</h2>
+
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="home.png" alt="Travel highlight 1">
+            </div>
+
+            <div class="mySlides">
+                <img src="banner.png" alt="Travel highlight 2">
+            </div>
+
+            <div class="mySlides">
+                <img src="logo.png" alt="Travel highlight 3">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
 
         <p>
             Welcome to Express Holiday Travel, your guide to unforgettable European adventures.
@@ -130,6 +174,35 @@
     <footer>
         <p>&copy; 2026 Express Holiday Travel</p>
     </footer>
+
+    <!-- Slideshow JavaScript -->
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+    }
+    </script>
 
 </body>
 </html>
